@@ -1,0 +1,16 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "My personal blog!",
+  "main": "index.js",
+  "author": "Gabe Dunn <gabed@hey.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vitepress dev blog",
+    "build": "vitepress build blog",
+    "serve": "vitepress serve blog"
+  },
+  "devDependencies": {
+    "vitepress": "^0.20.1"
+  }
+}
