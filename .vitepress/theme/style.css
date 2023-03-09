@@ -3,11 +3,9 @@
 @tailwind utilities;
 
 :root {
-  /* --c-brand: #3eaf7c; */
-  /* --c-brand-light: #4abf8a; */
-	--c-bg: #006492;
- /*  --c-brand: #00A8F7; */
+	/*  --c-brand: #00A8F7; */
 	/* --c-brand-light: #E31133; */
+  --c-bg: #006492;
 	--c-brand: #006492;
 	--c-brand-light: #00A8F7;
   --code-font: 'DankMono Nerd Font', 'Dank Mono', 'Fira Code', 'Fira Mono', ui-monospace,
