@@ -15,6 +15,7 @@ export interface Post {
     time: number
     string: string
   }
+  draft: boolean | undefined
   excerpt: string | undefined
   data?: Record<string, any>
 }
@@ -33,6 +34,7 @@ async function load(asFeed = false) {
   return fs
     .readdirSync(postDir)
     .map((file) => getPost(file, postDir, asFeed))
+    .filter(p => !p.draft)
     .sort((a, b) => b.date.time - a.date.time)
 }
 
@@ -59,6 +61,7 @@ function getPost(file: string, postDir: string, asFeed = false): Post {
     title: data.title,
     href: `/posts/${file.replace(/\.md$/, '.html')}`,
     date: formatDate(data.date),
+    draft: data.draft,
     excerpt: excerpt && md.render(excerpt)
   }
   if (asFeed) {
@@ -80,9 +83,9 @@ function formatDate(date: string | Date): Post['date'] {
     date = new Date(date)
   }
   date.setUTCHours(12)
-	// ISO-8601 date string
+  // ISO-8601 date string
   return {
     time: +date,
-		string: date.toISOString().slice(0, date.toISOString().indexOf('T'))
+    string: date.toISOString().slice(0, date.toISOString().indexOf('T'))
   }
 }
