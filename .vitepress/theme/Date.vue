@@ -6,7 +6,7 @@ const props = defineProps<{ date: Post['date'] }>()
 // TODO maybe convert date string to "weekday, mnth day, year"
 
 function getDateTime() {
-  return new Date(props.date.time).toISOString()
+  return new Date(props?.date?.time || Date.now()).toISOString()
 }
 </script>
 
@@ -16,7 +16,7 @@ function getDateTime() {
     <dd
       class="text-base leading-6 font-medium text-gray-500 dark:text-gray-300"
     >
-      <time :datetime="getDateTime()">{{ date.string.toLowerCase() }}</time>
+      <time :datetime="getDateTime()">{{ date?.string.toLowerCase() }}</time>
     </dd>
   </dl>
 </template>

@@ -14,7 +14,7 @@ function findCurrentIndex() {
 }
 
 // use the customData date which contains pre-resolved date info
-const date = computed(() => posts[findCurrentIndex()].date)
+const date = computed(() => posts[findCurrentIndex()]?.date)
 const nextPost = computed(() => posts[findCurrentIndex() - 1])
 const prevPost = computed(() => posts[findCurrentIndex() + 1])
 </script>
