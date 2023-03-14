@@ -34,7 +34,7 @@ async function load(asFeed = false) {
   return fs
     .readdirSync(postDir)
     .map((file) => getPost(file, postDir, asFeed))
-    .filter(p => !p.draft)
+    .filter((p) => !p.draft)
     .sort((a, b) => b.date.time - a.date.time)
 }
 

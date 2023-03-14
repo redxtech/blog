@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { useRoute } from 'vitepress'
 import Home from './Home.vue'
 import Article from './Article.vue'
+// import Toggle from './Toggle.vue'
 import NotFound from './NotFound.vue'
 
 const route = useRoute()
@@ -21,7 +22,9 @@ const isNotFound = computed(() => route.component === NotFound)
             alt="logo"
             src="/logo.svg"
           />
-          <span v-if="!isIndex" class="hidden md:inline dark:text-white">gabe's blog.</span>
+          <span v-if="!isIndex" class="hidden md:inline dark:text-white"
+            >gabe's blog.</span
+          >
         </a>
         <div class="text-sm text-gray-500 dark:text-white leading-5">
           <a
@@ -32,7 +35,9 @@ const isNotFound = computed(() => route.component === NotFound)
             ><span class="hidden sm:inline">github </span>source</a
           >
           <span class="mr-2 ml-2">·</span>
-          <a class="hover:text-gray-700 dark:hover:text-gray-200" href="/feed.rss"
+          <a
+            class="hover:text-gray-700 dark:hover:text-gray-200"
+            href="/feed.rss"
             >rss<span class="hidden sm:inline"> feed</span></a
           >
           <span class="mr-2 ml-2">·</span>
@@ -51,15 +56,17 @@ const isNotFound = computed(() => route.component === NotFound)
       <NotFound v-else-if="isNotFound" />
       <Article v-else />
     </main>
-		<div class="hidden">
-			<a rel="me" href="https://tilde.zone/@gabe">@gabe@tilde.zone</a>
-		</div>
+    <!-- <footer> -->
+    <!--   <toggle /> -->
+    <!-- </footer> -->
+    <div class="hidden">
+      <a rel="me" href="https://tilde.zone/@gabe">@gabe@tilde.zone</a>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .fullheight {
-	min-height: 100vh;
+  min-height: 100vh;
 }
 </style>
-
