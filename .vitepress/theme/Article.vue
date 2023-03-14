@@ -30,7 +30,7 @@ const prevPost = computed(() => posts[findCurrentIndex() + 1])
     </header>
 
     <div
-      class="divide-y xl:divide-y-0 divide-gray-200 dark:divide-slate-200/5 xl:grid xl:grid-cols-4 xl:gap-x-10 pb-16 xl:pb-20"
+      class="divide-y xl:divide-y-0 divide-gray-200 dark:divide-slate-200/5 xl:grid xl:grid-cols-4 xl:gap-x-10"
       style="grid-template-rows: auto 1fr"
     >
       <Author />

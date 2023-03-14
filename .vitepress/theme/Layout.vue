@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import { useRoute } from 'vitepress'
 import Home from './Home.vue'
 import Article from './Article.vue'
-// import Toggle from './Toggle.vue'
+import Toggle from './Toggle.vue'
 import NotFound from './NotFound.vue'
 
 const route = useRoute()
@@ -12,7 +12,7 @@ const isNotFound = computed(() => route.component === NotFound)
 </script>
 
 <template>
-  <div class="fullheight antialiased dark:bg-slate-900">
+  <div class="fullheight antialiased">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0">
       <nav class="flex justify-between items-center py-10 font-bold">
         <a class="text-xl" href="/" aria-label="The Vue Point">
@@ -56,9 +56,11 @@ const isNotFound = computed(() => route.component === NotFound)
       <NotFound v-else-if="isNotFound" />
       <Article v-else />
     </main>
-    <!-- <footer> -->
-    <!--   <toggle /> -->
-    <!-- </footer> -->
+    <footer>
+      <ClientOnly>
+        <toggle />
+      </ClientOnly>
+    </footer>
     <div class="hidden">
       <a rel="me" href="https://tilde.zone/@gabe">@gabe@tilde.zone</a>
     </div>

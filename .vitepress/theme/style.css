@@ -16,6 +16,10 @@
     'Liberation Mono', 'Courier New', monospace;
 }
 
+.dark {
+  --vp-c-bg: rgb(15 23 42);
+}
+
 nav img {
   vertical-align: middle;
 }
