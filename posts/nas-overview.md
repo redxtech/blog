@@ -9,5 +9,4 @@ draft: true
 
 hello friends! something that i've put together semi-recently that i'm quite happy with is my NAS. i feel that this is something that would be relevant content, so here i am with another post!
 
--------------------------
-
+---

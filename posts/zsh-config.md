@@ -9,5 +9,4 @@ draft: true
 
 hello friends! another part of my development setup is is command line. as an avid linux user, this is doubly true. today, i will be going over how i have configured my shell to exactly match my preferences!
 
--------------------------
-
+---

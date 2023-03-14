@@ -9,5 +9,4 @@ draft: true
 
 hello friends! another project of mine is a simple url shrotener called yoinked. in this post, i will be going over how to use it, and also how to host your own instance.
 
--------------------------
-
+---

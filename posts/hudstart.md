@@ -9,7 +9,6 @@ draft: true
 
 hello friends! a bigger project i began recently is a stream overlay app called hudstart. it allows tournament organizers and streamers to manage their stream overlay more easily, by pulling data from [start.gg][1], where many tournaments are organized. i will be going over basic usage from a TO and streamer perspective, and then looking at how it works a little bit.
 
--------------------------
-
+---
 
 [1]: https://start.gg
