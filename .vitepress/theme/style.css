@@ -1,24 +1,19 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
+  /* theme colours */
   /*  --c-brand: #00A8F7; */
   /* --c-brand-light: #E31133; */
   --c-bg: #006492;
   --c-brand: #006492;
   --c-brand-light: #00a8f7;
-  --code-font: 'DankMono Nerd Font', 'Dank Mono', 'Fira Code', 'Fira Mono',
-    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
-    'Courier New', monospace;
-}
 
-html {
-  font-family: 'TT Norms', ui-sans-serif, system-ui, -apple-system,
+  /* vitepress theme overrides */
+  --vp-font-family-base: 'TT Norms', ui-sans-serif, system-ui, -apple-system,
     BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
     'Noto Color Emoji';
-  /* background-color: var(--c-bg); */
+  --vp-font-family-mono: 'DankMono Nerd Font', 'Dank Mono', 'Fira Code',
+    'Fira Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
 }
 
 nav img {
@@ -60,9 +55,9 @@ h2 {
 }
 
 /* code blocks styling */
-.prose code {
-  font-family: var(--code-font);
-}
+/* .prose code { */
+/*   font-family: var(--code-font); */
+/* } */
 
 .prose code::before {
   content: none;
