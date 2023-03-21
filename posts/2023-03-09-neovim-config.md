@@ -296,8 +296,6 @@ technically, as far as syntax goes, deno is covered by the typescript language s
 
 ```lua
 -- plugins/deno.lua
-local nvim_lsp = require('lspconfig')
-
 return {
 	-- correctly setup lspconfig
 	{
