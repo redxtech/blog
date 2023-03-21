@@ -547,7 +547,7 @@ thanks for reading, and best of luck with your own neovim config!
 [0]: https://github.com/redxtech/dotfiles/tree/master/.config/nvim
 [1]: https://github.com/redxtech/dotfiles/tree/393f8a5/.config/nvim
 [2]: https://github.com/folke/lazy.nvim
-[3]: https://github.com/LazyVim/LazyVim.nvim
+[3]: https://github.com/LazyVim/LazyVim
 [4]: https://lazyvim.org
 [5]: https://github.com/wbthomason/packer.nvim
 [6]: https://www.lazyvim.org/keymaps#lsp
