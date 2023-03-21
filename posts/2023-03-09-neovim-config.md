@@ -219,8 +219,6 @@ if you want to add more, you can use the format specified in those files to make
 
 ```lua
 -- lua/plugins/deno.lua
-local nvim_lsp = require('lspconfig')
-
 return {
 	-- correctly setup lspconfig
 	{
