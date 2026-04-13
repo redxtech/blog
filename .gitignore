@@ -3,3 +3,4 @@ dist
 .vitepress/metadata.json
 .vitepress/cache
 yarn-error.log
+.direnv
