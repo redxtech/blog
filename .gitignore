@@ -4,3 +4,4 @@ dist
 .vitepress/cache
 yarn-error.log
 .direnv
+/result

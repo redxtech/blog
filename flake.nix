@@ -25,6 +25,28 @@
           ...
         }:
         {
+          packages = {
+            blog = pkgs.buildNpmPackage {
+              name = "blog.gabedunn.dev";
+              src = ./.;
+
+              npmDepsHash = "sha256-0k8OpuxgH+ZIa9bScuiQI7tPcp0cF2ImEI83KGUuljc=";
+
+              # needed to avoid build hanging with vitepress
+              # https://discourse.nixos.org/t/nix-build-of-vuepress-project-is-slow-or-hangs/56521/5
+              buildPhase = ''
+                npm run build > /dev/null 2>&1
+              '';
+
+              installPhase = ''
+                mkdir -p $out/share
+                cp -r .vitepress/dist $out/share/blog.gabedunn.dev
+              '';
+            };
+
+            default = self'.packages.blog;
+          };
+
           devShells.default = pkgs.mkShell {
             packages = with pkgs; [ nodejs_25 ];
           };
